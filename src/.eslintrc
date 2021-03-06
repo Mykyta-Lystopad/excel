@@ -1,0 +1,24 @@
+{
+  "parser": "babel-eslint",
+  "env": {
+    "es6": true,
+    "browser": true,
+    "node": true
+  },
+  "rules": {
+    "semi": "off",
+    "linebreak-style": "off",
+    "indent": "off",
+    "quotes": "off",
+    "comma-dangle": "off",
+    "comma-spacing": "off",
+    "no-multi-spaces": "off",
+    "space-before-blocks": "off",
+    "padded-blocks": "off",
+    "require-jsdoc": "off",
+    "eol-last": "off",
+    "no-multiple-empty-lines": "off",
+    "no-trailing-spaces": "off"
+  },
+  "extends": ["eslint:recommended", "google"]
+}
