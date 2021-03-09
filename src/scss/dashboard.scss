@@ -36,7 +36,7 @@
       border: green;
     }
   }
-  &__view{
+ &__view{
     max-width: 1000px;
     margin: 0 auto;
   }
@@ -44,7 +44,7 @@
     padding: 1rem;
 
   }
-  &__list-header{
+&__list-header{
     @include row-center;
     justify-content: space-between;
     color: #202124;
