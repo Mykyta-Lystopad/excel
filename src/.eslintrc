@@ -19,7 +19,9 @@
     "eol-last": "off",
     "no-multiple-empty-lines": "off",
     "no-trailing-spaces": "off",
-    "no-unused-vars": "off"
+    "no-unused-vars": "off",
+    "arrow-parens": "off",
+    "no-undef": "off"
   },
   "extends": ["eslint:recommended", "google"]
 }
