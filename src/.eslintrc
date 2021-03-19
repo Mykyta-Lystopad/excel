@@ -21,7 +21,8 @@
     "no-trailing-spaces": "off",
     "no-unused-vars": "off",
     "arrow-parens": "off",
-    "no-undef": "off"
+    "no-undef": "off",
+    "operator-linebreak": "off"
   },
   "extends": ["eslint:recommended", "google"]
 }
