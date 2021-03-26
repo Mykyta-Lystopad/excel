@@ -22,7 +22,8 @@
     "no-unused-vars": "off",
     "arrow-parens": "off",
     "no-undef": "off",
-    "operator-linebreak": "off"
+    "operator-linebreak": "off",
+    "spaced-comment": "off"
   },
   "extends": ["eslint:recommended", "google"]
 }
