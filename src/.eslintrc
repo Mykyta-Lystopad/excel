@@ -23,7 +23,9 @@
     "arrow-parens": "off",
     "no-undef": "off",
     "operator-linebreak": "off",
-    "spaced-comment": "off"
+    "spaced-comment": "off",
+    "prefer-const": "off",
+    "max-len": "off",
   },
   "extends": ["eslint:recommended", "google"]
 }
