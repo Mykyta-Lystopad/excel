@@ -26,6 +26,7 @@
     "spaced-comment": "off",
     "prefer-const": "off",
     "max-len": "off",
+    "no-unexpected-multiline": "off",
   },
   "extends": ["eslint:recommended", "google"]
 }
