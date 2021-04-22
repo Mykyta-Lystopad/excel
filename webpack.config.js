@@ -38,7 +38,7 @@ module.exports = {
     // target: process.env.NODE_ENV === "development" ? "web" : "browserslist",
     devtool: isProd ? 'source-map' : false,
     devServer: {
-        port: 3000,
+        port: 8000,
         hot: isDev,
 
     },

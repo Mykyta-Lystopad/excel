@@ -27,6 +27,7 @@
     "prefer-const": "off",
     "max-len": "off",
     "no-unexpected-multiline": "off",
+    "no-case-declarations": "off",
   },
   "extends": ["eslint:recommended", "google"]
 }
