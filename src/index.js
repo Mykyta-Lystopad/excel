@@ -14,7 +14,7 @@ const store = createStore(rootReducer, initialState)
 // store = {subscribe: ƒ, dispatch: ƒ, getState: ƒ}
 
 const stateListener = debounce(state => {
-    console.log('App ', state)
+    // console.log('App ', state)
     // state = App  {title: "Моя первая таблица", rowState: {…}, colState: {…}, dataState: {…},} stylesState: {…},
     storage('excel-state', state) // записываем в localStorage ( utils.js )
 }, 500)

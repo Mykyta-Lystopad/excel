@@ -1,5 +1,6 @@
 import {defaultStyles} from "@/constans";
 import {toInlineStyles} from "@core/utils";
+import {parseFn} from "@core/parseFn";
 
 export const CODES = {
     A: 65,
@@ -32,7 +33,7 @@ function withWidthFrom(state){
 function toCell(col, row, width, state){
     const id = `${col}:${row}`
     const text = state.dataState[id] || ''
-    const data = state.dataState[id]
+    // const data = state.dataState[id]
     const styles = toInlineStyles( {
         ...defaultStyles,
         ...state.stylesState[id]
@@ -44,10 +45,10 @@ function toCell(col, row, width, state){
                 contenteditable 
                 data-id="${id}"
                 data-type="cell"
-                data-value="${data}"
+                data-value="${text || ''}"
                 style="${styles}; width: ${width};"
             >
-                ${text || ''}
+                ${parseFn(text) || ''}
             </div>
             `
 }
