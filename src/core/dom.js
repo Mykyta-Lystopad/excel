@@ -57,6 +57,10 @@ class Dom {
         return this
     }
 
+    get data(){
+        return this.$el.dataset
+    }
+
     closest(selector){
         return $(this.$el.closest(selector))
     }
@@ -71,6 +75,14 @@ class Dom {
 
     css(styles = {}){
         Object.keys(styles).map(key => this.$el.style[key] = styles[key])
+    }
+
+    getStyles(styles = []){
+        return styles.reduce((res, s) => {
+            res[s] = this.$el.style[s]
+            // res = {textAlign: "center", fontWeight: "bold", textDecoration: "underline"}
+            return res
+        }, {})
     }
 
     // Рекурсия
@@ -89,6 +101,14 @@ class Dom {
         this.$el.focus()
         return this
     }
+
+    // attr(name, value){
+    //     if (value){
+    //         this.$el.setAttribute(name, value)
+    //         return this
+    //     }
+    //     return this.$el.getAttribute(name)
+    // }
 
     addClass(className){
         this.$el.classList.add(className)

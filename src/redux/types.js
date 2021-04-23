@@ -1,0 +1,5 @@
+export const tableResize = 'table-resize'
+export const changeText = 'changeText'
+export const applyStyle = 'applyStyle'
+export const changeStyles = 'changeStyles'
+export const changeTitle = 'changeTitle'

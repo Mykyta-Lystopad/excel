@@ -1,52 +1,44 @@
-import {ExcelComponent} from "@core/ExcelComponent";
+import {createToolbar} from "@/components/toolbar/toolbar.template";
+import {$} from "@core/dom";
+import {ExcelStateComponent} from "@core/ExcelStateComponent";
+import {defaultStyles} from "@/constans";
 
-export class Toolbar extends ExcelComponent{
+export class Toolbar extends ExcelStateComponent{
     static className = 'excel__toolbar'
 
     constructor($root, options) {
         super($root, {
             name: 'Toolbar',
             listeners: ['click'],
+            subscriber: ['currentStyles'],
             ...options
         });
     }
 
+    prepare() {
+        this.initState(defaultStyles)
+    }
+
+    get template(){
+        return createToolbar(this.state)
+    }
+
     toHtml() {
-        return `
-            <button class="button">
-                    <span class="material-icons">
-                        format_align_left
-                    </span>
-            </button>
-            <button class="button">
-                    <span class="material-icons">
-                        format_align_center
-                    </span>
-            </button>
-            <button class="button">
-                    <span class="material-icons">
-                        format_align_right
-                    </span>
-            </button>
-            <button class="button">
-                    <span class="material-icons">
-                        format_bold
-                    </span>
-            </button>
-            <button class="button">
-                    <span class="material-icons">
-                        format_italic
-                    </span>
-            </button>
-            <button class="button">
-                    <span class="material-icons">
-                        format_underlined
-                    </span>
-            </button>
-        `
+        return this.template
+    }
+
+    storeChanged(changes) {
+        this.setState(changes.currentStyle)
     }
 
     onClick(event) {
-        console.log(event.target)
+        const $target = $(event.target)
+        // $target.data.type = button
+        if ($target.data.type === 'button') {
+            const value = JSON.parse($target.data.value)
+            // value = {fontWeight: "bold"}
+            this.$emit('toolbar:applyStyle', value)
+
+        }
     }
 }
