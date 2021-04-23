@@ -16,9 +16,9 @@ export class Header extends ExcelComponent {
         });
     }
 
-    // prepare() {
-    //     this.onInput = debounce(this.onInput, 300)
-    // }
+    prepare() {
+        this.onInput = debounce(this.onInput, 300)
+    }
 
     toHtml() {
         const title = this.store.getState().title || defaultTitle
