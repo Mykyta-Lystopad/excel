@@ -50,6 +50,7 @@ function toCell(col, row, width, state){
             >
                 ${parseFn(text) || ''}
             </div>
+            
             `
 }
 

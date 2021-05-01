@@ -15,6 +15,8 @@ export function range(start, end){
 }
 
 export function storage(key, data = null){
+    // console.log(key)
+    // console.log(data)
     if (!data){
         return JSON.parse(localStorage.getItem(key))
     }
@@ -52,6 +54,10 @@ export function debounce(fn, wait){
         clearTimeout(timeout)
         timeout = setTimeout(later, wait)
     }
+}
+
+export function clone(obj){
+    return JSON.parse(JSON.stringify(obj))
 }
 
 
